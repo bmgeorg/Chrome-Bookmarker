@@ -9,4 +9,5 @@ function getCurrentPage() {
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
 		sendResponse(getCurrentPage());
-	});
+	}
+);
