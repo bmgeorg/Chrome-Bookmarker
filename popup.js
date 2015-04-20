@@ -124,7 +124,7 @@ function dumpNode(bookmarkNode, query) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-	dumpBookmarks();
+	//query current tab for page content
 	chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 		chrome.tabs.sendMessage(tabs[0].id, {request: "pageContent"}, function(page) {
 			var body = page.body;
